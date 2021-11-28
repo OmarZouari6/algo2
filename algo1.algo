@@ -1,0 +1,26 @@
+ALGORITHM distinct elements
+VAR
+    set1 : ARRAY_OF INTEGER[4]; 
+    set1 : ARRAY_OF INTEGER[5]; 
+    i,j : INTEGER;
+    sum : INTEGER:=0;
+    test : BOOLEAN;
+BEGIN
+    Write('Print Array 1')
+    read(set1)
+    Write('Print Array 2')
+    read(set2)
+    FOR i FROM 0 TO set1.length-1 STEP 1  DO
+        test:= False
+        WHILE (0<set2.length) DO
+            IF (set[i]=set2[j]) THEN
+            test :=TRUE
+            END_IF
+        j:=j+1
+        END_WHILE
+        IF (test=FALSE) THEN
+        sum:= sum+set1[i]+set2[j]
+        END_IF
+    END_FOR
+    Write(sum);
+END

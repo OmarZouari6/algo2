@@ -1,0 +1,20 @@
+ALGORITHM comparateur
+VAR
+    TAB1=ARRAY_OF INTEGER[];
+    TAB2=ARRAY_OF INTEGER[];
+    TAB3=ARRAY_OF INTEGER[];
+    s,i,j=INTEGER=0;
+BEGIN
+    Read(TAB1);
+    Read(TAB2);
+    FOR i FROM 0 TO TAB1.length STEP 1  DO
+        FOR j FROM 0 TO TAB2.length STEP 1  DO
+            IF (TAB1[i]=TAB2[j]) THEN
+                TAB3.push(TAB1[i]);
+                s+=TAB1[i]*2
+            END_IF
+        END_FOR
+    END_FOR
+    Write("Sum of overlapping elements:",s);
+    Write("Explanation: Common elements are", TAB3)
+END
